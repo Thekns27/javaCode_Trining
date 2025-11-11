@@ -1,0 +1,12 @@
+// Legacy Form 
+	byte , short , int , char 
+
+// java 5 
+	String , Enum 
+
+// java 16 
+
+// TODO Type of Switch Clause
+	switch(value){
+
+	}
