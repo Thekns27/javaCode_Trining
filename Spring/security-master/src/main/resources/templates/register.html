@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html th:replace="~{layout/masterLayout :: layout(~{::main})}" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Register Form</h4>
+                    </div>
+                    <div class="card-body">
+                        <form th:action="@{/register}" th:object="${user}" method="post">
+                            <div class="mb-3">
+                                <label class="form-label">UserName</label>
+                                <input type="text"
+                                       th:field="*{username}"
+                                class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="text"
+
+                                       th:field="*{password}"
+                                       class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Roles</label>
+                                <input type="text" placeholder="Enter roles name with comma"
+                                       name="roleName"
+                                       class="form-control">
+                            </div>
+                            <input type="submit" value="Register"
+                            class="btn btn-primary w-100">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

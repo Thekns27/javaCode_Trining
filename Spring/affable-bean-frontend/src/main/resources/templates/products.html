@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{layout/masterLayout :: layout(~{::main})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<main role="content">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Product List</h1>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Description</th>
+                                <th>Last Update</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="pro : ${products}">
+                                <td th:text="${pro.getId()}"></td>
+                                <td th:text="${pro.getId()}"></td>
+                                <td th:text="${pro.getId()}"></td>
+                                <td th:text="${pro.getId()}"></td>
+                                <td th:text="${pro.getId()}"></td>
+                                <td th:text="${pro.getId()}"></td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>

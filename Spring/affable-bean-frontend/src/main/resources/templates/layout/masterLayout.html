@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/bootstrap/css/app.css}">
+</head>
+<body>
+
+<section>
+    <div class="container">
+        <img id="logo" th:src="@{/images/logo.png}" alt="Logo">
+        <img id="logoText" th:src="@{/images/logoText.png}" alt="Logo Text">
+        <img id="stalk" th:src="@{/images/stalk.png}" alt="Stalk">
+    </div>
+</section>
+
+<div th:replace="${content}"></div>  <!-- Fixed the syntax -->
+
+</body>
+</html>
